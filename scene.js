@@ -3131,16 +3131,12 @@ var snakeSpeed = objects.length*0.01
 var snakeCam = sceneElements.sceneGraph.getObjectByName("snakeCam")
 var movementMark = 0
 function computeFrame(time) {
-    snowflakes.push({obj:createSnowFlake(), xVel:Math.random()*625-325, zVel:Math.random()*625-325})
-    snowflakes[snowflakes.length-1]["obj"].position.y += 300
-    //snowflakes[snowflakes.length-1]["obj"].position.x +=Math.random()*300 -150
-    //snowflakes[snowflakes.length-1]["obj"].position.z +=Math.random()*300 -150
-    //snowflakes.push({obj:createSnowFlake(), xVel:Math.random()*8000, zVel:Math.random()*8000})
-    //snowflakes[snowflakes.length-1]["obj"].position.y += 8000
-    //snowflakes[snowflakes.length-1]["obj"].position.x +=Math.random()*300 -150
-    //snowflakes[snowflakes.length-1]["obj"].position.z +=Math.random()*300 -150
-    //snowflakes[snowflakes.length-1].position.y += -155
-    sceneElements.sceneGraph.add(snowflakes[snowflakes.length-1]["obj"])
+    if(snowflakes.length <= 75){
+    	snowflakes.push({obj:createSnowFlake(), xVel:Math.random()*halfBoard*2-halfBoard, zVel:Math.random()*halfBoard*2-halfBoard})
+    	snowflakes[snowflakes.length-1]["obj"].position.y += 300
+
+    	sceneElements.sceneGraph.add(snowflakes[snowflakes.length-1]["obj"])
+    }
     for(var indx = 0; indx < snowflakes.length; indx++){
         var curr = snowflakes[indx]["obj"]
         curr.position.y -= 3
