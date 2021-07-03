@@ -3131,7 +3131,7 @@ var snakeSpeed = objects.length*0.01
 var snakeCam = sceneElements.sceneGraph.getObjectByName("snakeCam")
 var movementMark = 0
 function computeFrame(time) {
-    if(snowflakes.length <= 90){
+    if(snowflakes.length <= 110){
     	snowflakes.push({obj:createSnowFlake(), xVel:Math.random()*halfBoard*2-halfBoard, zVel:Math.random()*halfBoard*2-halfBoard})
     	snowflakes[snowflakes.length-1]["obj"].position.y += 300
 
