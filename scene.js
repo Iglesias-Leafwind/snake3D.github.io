@@ -3140,14 +3140,14 @@ function computeFrame(time) {
     for(var indx = 0; indx < snowflakes.length; indx++){
         var curr = snowflakes[indx]["obj"]
         curr.position.y -= 3
+        if(curr.position.y <= -155){
+		curr.position.y = 300
+        }
         curr.position.x = (snowflakes[indx]["xVel"])*Math.sin((curr.position.y/3)/(8*3.14))
         curr.position.z = (snowflakes[indx]["zVel"])*Math.cos((curr.position.y/3)/(8*3.14))
         curr.rotateX(snowflakes[indx]["xVel"])
         curr.rotateY(snowflakes[indx]["xVel"]+snowflakes[indx]["zVel"])
         curr.rotateZ(snowflakes[indx]["zVel"])
-        if(curr.position.y <= -155){
-            sceneElements.sceneGraph.remove(curr)
-        }
     }
 
     if (rotate){    
