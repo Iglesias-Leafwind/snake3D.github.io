@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--
+
+		Wolfs-Gravestone-Snake.html
+
+		Is a recreation of the Wolfs Gravestone Claymore from Genshin Impact
+
+-->
+
+<head>
+
+	<title>Wolfs-Gravestone-Snake &mdash; A claymore</title>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
+
+
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="./build/three.js" defer></script>
+	<script type="module" src="./lib/js/controls/OrbitControls.js" defer></script>
+	
+	<script type="module" src="./lib/js/objects/Reflector.js" defer></script>	
+
+	<script type="text/javascript" src="helper.js" defer></script>
+	<script type="text/javascript" src="scene.js" defer></script>
+
+</head>
+<style>
+	body {
+	overflow: hidden;
+	margin: 0;
+	}
+
+	.ui {
+	position: absolute;
+	}
+
+	button{
+	margin: 20px;
+	}
+</style>
+<body>
+	<div id="Wolfs-Gravestone-Snake"> </div>
+	<div style="display:block">
+		<img source="./textures/stars.jpg"></img>
+		<button style="top:0px;left: 0px" class="ui button" onclick="ChangeCamera()">ChangeCamera</button>
+	</div>
+	<div style="display:block;">
+		<h1 style="top:35%;left: 45.5%; display: none" class="ui" id="win">You Win!</h1>
+		<h1 style="top:35%;left: 45.5%; display: none" class="ui" id="lose">You Lose!</h1>
+		<button style="top:45%;left: 45%; display: none" class="ui button" id="reload" onClick="window.location.reload();">New Game</button>
+	</div>
+</body>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  color: blueviolet; 
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  border: 2px solid #008CBA;
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+</style>
+</html>
